@@ -34,7 +34,7 @@ weatherForm.onsubmit=function(e){
                 msg2.textContent='';
             }else{
                 msg1.textContent='';
-                msg2.textContent=`location: ${data.location}, temperature: ${data.temperature}F, forecast: ${data.forecast}`
+                msg2.textContent=`location: ${data.location}, temperature: ${data.temperature}F, forecast: ${data.forecast} \n minimum temperature: ${data.temperatureMin} \n max temperature: ${data.temperatureMax}`
             }
         })
     })

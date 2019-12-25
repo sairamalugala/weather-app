@@ -59,7 +59,7 @@ app.get('/weather', (req, res) => {
                 error
             })
         }
-        forecast(latitude,longitude, (error,{temperature, precipProbability,summary}={})=>{
+        forecast(latitude,longitude, (error,{temperature, precipProbability,summary,temperatureMin,temperatureMax}={})=>{
             if(error){
                 return res.send({
                     error
@@ -70,7 +70,9 @@ app.get('/weather', (req, res) => {
                 temperature,
                 rainProbability:precipProbability,
                 location,
-                address
+                address,
+                temperatureMax,
+                temperatureMin
             })
         })
     })
